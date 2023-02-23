@@ -1,3 +1,6 @@
+# Mac-specific hidden file used to store Finder information about that folder
+.DS_Store/
+
 # Logs
 logs
 *.log
