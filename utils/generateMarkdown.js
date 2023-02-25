@@ -13,6 +13,8 @@ function renderLicenseBadge(license) {
     return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
   } else if (license == "Unlicense") {
     return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
+  } else {
+    return;
   }
 }
 
@@ -27,6 +29,15 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `# ${answers.title} ${renderLicenseBadge(answers.license)}
+  # Table of Contents
+  1. [Description](#description)
+  2. [Installation Instructions](#installation-instructions)
+  3. [Usage Information](#usage-information)
+  4. [Contribution Guidelines](#contribution-guidelines)
+  5. [Test Instructions](#test-instructions)
+  6. [Licensing Information](#licensing-information)
+  7. [Questions](#questions)
+  
   ## Description 
   ${answers.description}
   ## Installation Instructions 
@@ -39,11 +50,9 @@ function generateMarkdown(answers) {
   ${answers.tests}
   ## Licensing Information 
   ${answers.license}
-  ## GitHub Username 
-  ${answers.username}
-  ## Email Address 
-  ${answers.email} 
-
+  ## Questions 
+  GitHub profile: [${answers.username}](https://github.com/${answers.username})
+  Contact me: <${answers.email}> 
 `;
 }
 
