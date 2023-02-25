@@ -1,10 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const markdown = require('./utils/generateMarkdown');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -54,7 +53,7 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, answersArray) {
     console.log(answersArray);
 
@@ -64,19 +63,7 @@ function writeToFile(fileName, answersArray) {
             });
 }
 
-
-
-// function writeToFile(answers) {
-//     console.log(answers)
-//     const answersArray = JSON.stringify(answers);
-//     console.log(answersArray);
-//     fs.writeFile('GeneratedREADME.md', answersArray, (err) => {
-//         if (err) throw err;
-//         console.log("Saved!");
-//     });
-// }
-
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer
         .prompt(questions)
@@ -98,34 +85,3 @@ function init() {
 
 // Function call to initialize app
 init();
-
-
-
-
-// inquirer
-//   .prompt([
-//     {
-//       type: 'input',
-//       name: 'name',
-//       message: 'What is your name?',
-//     },
-//     {
-//       type: 'checkbox',
-//       message: 'What languages do you know?',
-//       name: 'stack',
-//       choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-//     },
-//     {
-//       type: 'list',
-//       message: 'What is your preferred method of communication?',
-//       name: 'contact',
-//       choices: ['email', 'phone', 'telekinesis'],
-//     },
-//   ])
-//   .then((data) => {
-    // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
-    // fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-    //   err ? console.log(err) : console.log('Success!')
-//     );
-//   });
