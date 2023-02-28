@@ -36,6 +36,9 @@ THEN I am taken to the corresponding section of the README
 ## Link to deployed GitHub page
 [Deployed Challenge 9 README Generator](https://abmetheny.github.io/readme-generator/)
 
+## Link to walkthrough tutorial
+[README Generator walkthrough](https://drive.google.com/file/d/1J1SiNfNuwHeCyqr6tUaChFOurwLVETRV/view?usp=sharing)
+
 ## Screenshots
 <img src="./assets/images/Screenshot1.png">
 <img src="./assets/images/Screenshot2.png">
